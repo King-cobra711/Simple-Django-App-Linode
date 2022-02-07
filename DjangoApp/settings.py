@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['172.105.184.65']
 # Application definition
 
 INSTALLED_APPS = [
+    'classroom.apps.ClassroomConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
