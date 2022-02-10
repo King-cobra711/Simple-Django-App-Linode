@@ -1,6 +1,11 @@
-<h1>Form View Template</h1>
-<h3><a href="{% url "classroom:home" %}">Home</a></h3>
-<form method="POST">
-  {% csrf_token %} {{form.as_p}}
-  <input type="submit" value="Submit" />
-</form>
+{% extends 'base.html' %} {% block content %}
+<div class="container-sm" style="max-width: 576px">
+  <form method="POST" class="pt-4">
+    {% csrf_token %}
+    <legend class="mb-3">Form View Template</legend>
+    {{form.as_p}}
+    <input type="submit" class="btn btn-primary" />
+  </form>
+</div>
+
+{% endblock content %}

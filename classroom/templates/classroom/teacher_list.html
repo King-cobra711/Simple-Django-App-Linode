@@ -1,5 +1,5 @@
-<h1>List Of Teachers (ListView)</h1>
-<h3><a href="{% url "classroom:home" %}">Home</a></h3>
+{% extends 'base.html' %}
+{% block content %}<h1>List Of Teachers (ListView)</h1>
 <ul>
   {% for teacher in teacher_list %}
   <li>
@@ -11,4 +11,5 @@
     </ul></p>
   </li>
   {% endfor %}
-</ul>
+</ul>{% endblock content %}
+
