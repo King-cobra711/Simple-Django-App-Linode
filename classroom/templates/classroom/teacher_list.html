@@ -1,15 +1,34 @@
-{% extends 'base.html' %}
-{% block content %}<h1>List Of Teachers (ListView)</h1>
-<ul>
-  {% for teacher in teacher_list %}
-  <li>
-    <p>{{teacher.first_name}} {{teacher.last_name}}
-    <ul>
-      <a href="/classroom/teacher_detail/{{ teacher.id}}">About</a>
-      <a href="/classroom/teacher_update/{{ teacher.id}}">Update</a>
-      <a href="/classroom/teacher_delete/{{teacher.id}}">Delete</a>
-    </ul></p>
-  </li>
-  {% endfor %}
-</ul>{% endblock content %}
-
+{% extends 'base.html' %} {% block content %}
+<div class="container-sm mx-auto text-center mt-4 p-3">
+  <h1>List of Teachers</h1>
+</div>
+{% for teacher in teacher_list %}
+<div class="card mx-auto" style="max-width: 576px">
+  <h5 class="card-header">{{teacher.first_name}} {{teacher.last_name}}</h5>
+  <div class="container">
+    <div class="row justify-content-evenly p-3">
+      <div class="col-3">
+        <a
+          class="btn btn-primary"
+          href="/classroom/teacher_detail/{{ teacher.id}}"
+          >About</a
+        >
+      </div>
+      <div class="col-3">
+        <a
+          class="btn btn-secondary"
+          href="/classroom/teacher_update/{{ teacher.id}}"
+          >Update</a
+        >
+      </div>
+      <div class="col-3">
+        <a
+          class="btn btn-danger"
+          href="/classroom/teacher_delete/{{teacher.id}}"
+          >Delete</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %} {% endblock content %}

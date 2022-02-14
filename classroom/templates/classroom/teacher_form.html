@@ -1,8 +1,11 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container-sm" style="max-width: 576px">
   <form method="POST" class="pt-4">
-    {% csrf_token %}
-    <legend class="mb-3">Create Teacher Form</legend>
+    {% csrf_token %} {% if "update" in request.path%}
+    <legend class="mb-3">Update Teacher</legend>
+    {% else %}
+    <legend class="mb-3">Create Teacher</legend>
+    {% endif %}
     <div class="form-group">{{form.as_p}}</div>
     <input type="submit" class="btn btn-primary" />
   </form>

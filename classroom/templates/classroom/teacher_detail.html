@@ -1,3 +1,14 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Detail View for a Teacher</h1>
-{{teacher}}{% endblock content %}
+<div class="container-sm mx-auto text-center mt-4 p-3">
+  <h1>Detail View for a Teacher</h1>
+</div>
+
+<div class="card w-50 mx-auto">
+  <div class="card-body">
+    <h4 class="card-title text-cenetr"><u>About</u></h4>
+    <p class="card-text">First Name: {{teacher.first_name}}</p>
+    <p class="card-text">Last Name: {{teacher.last_name}}</p>
+    <p class="card-text">Subject: {{teacher.subject}}</p>
+  </div>
+</div>
+{% endblock content %}

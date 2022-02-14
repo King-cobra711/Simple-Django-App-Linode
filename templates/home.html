@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mx-auto mt-4">
+  <h1>Welcome to my simple Django App</h1>
+  <p>Email: matt@matthewhansen.com.au</p>
+  <p>
+    GitHub:
+    <a href="https://github.com/King-cobra711"
+      >https://github.com/King-cobra711</a
+    >
+  </p>
+  <p>
+    My Site:
+    <a href="https://king-cobra711.github.io/My-Site/"
+      >https://king-cobra711.github.io/My-Site/</a
+    >
+  </p>
+
+  <h4>About</h4>
+  <p>This app incorporates the following:</p>
+  <ul>
+    <li>Django function based views</li>
+    <li>Django Template Language to interact with the front-end from Django</li>
+    <li>Django Models to interact with SQL backend databases</li>
+    <li>advanced class based views to quickly create websites</li>
+    <li>Django Forms</li>
+    <li>relationships between model tables in the database</li>
+  </ul>
+  <p>
+    To navigate to different pages use the navbar at the top. This app is a
+    simple CRUD application that enable you to:
+  </p>
+  <ul>
+    <li>Create a teacher by providing a first name, last name and subject.</li>
+    <li>List out all the teachers that are currently in the db</li>
+    <li>Update a teacher's first name, last name and subject.</li>
+    <li>Delete a teacher from the db</li>
+  </ul>
+  <p>
+    You can also fill out a contact form that relays the details of your message
+    on a thank-you page.
+  </p>
+  <h4>Technologies</h4>
+  <ul>
+    <li>Python 3</li>
+    <li>Django</li>
+    <li>Visual Studio Code</li>
+    <li>SQLite</li>
+    <li>BootStrap 5</li>
+    <li>Linode</li>
+    <li>Git</li>
+  </ul>
+</div>
+
+{% endblock content %}

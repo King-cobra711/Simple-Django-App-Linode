@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, FormView, CreateView, ListView, DetailView, UpdateView, DeleteView
-from classroom.forms import ContactForm, CreateTeacherForm
+from classroom.forms import ContactForm, CreateTeacherForm, UpdateTeacherForm
 from django.urls import reverse, reverse_lazy
 from classroom.models import Teacher
 # Create your views here.
@@ -37,8 +37,8 @@ class TeacherDetailView(DetailView):
 class TeacherUpdateView(UpdateView):
     #only updating a single primary key
     model = Teacher
+    form_class = UpdateTeacherForm 
     #remember that you can cusomize the fields to be used
-    fields = "__all__"
     success_url = reverse_lazy('classroom:teacher_list')
 
 class TeacherDeleteView(DeleteView):
