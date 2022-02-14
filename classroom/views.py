@@ -17,7 +17,7 @@ class TeacherCreateView(CreateView):
     model = Teacher
     form_class = CreateTeacherForm 
     template_name = 'classroom/teacher_form.html'
-    success_url = reverse_lazy("classroom:thank_you")
+    success_url = reverse_lazy("classroom:teacher_list")
 
 class TeacherListView(ListView):
     # model_list.html
