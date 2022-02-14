@@ -57,5 +57,11 @@ class ContactFormView(FormView):
 
     # What to do with the form
     def form_valid(self, form):
-        print(form.cleaned_data)
-        return super().form_valid(form)
+        self.request.session['sent_data'] = form.cleaned_data
+
+    #Helpful link regarding cleaned data and how to use it on the success page.
+    #https://stackoverflow.com/questions/12717054/send-form-data-from-views-to-template
+
+
+
+        return super(ContactFormView, self).form_valid(form)
